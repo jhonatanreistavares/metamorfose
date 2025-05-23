@@ -4,6 +4,7 @@ using System.Collections;
 
 public class Unit : MonoBehaviour
 {
+
     [SerializeField] private Animator persoAnimator;
     
     private Vector3 targetPosition;
@@ -13,6 +14,10 @@ public class Unit : MonoBehaviour
         targetPosition = transform.position;
     }
     
+    private void Start()
+    {
+        LevelGrid.Instance.SetUnitAtGridPosition();
+    }
     private void Update()
     {
        
